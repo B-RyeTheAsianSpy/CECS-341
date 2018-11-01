@@ -31,14 +31,11 @@ main:
 
 	li $t2, 0x20		# the counter register (cx). 0x10 moves 16 words
 
-loop:
+
 	beq $t2, $zero, exit	# the memory move completes when cx = 0
 	lw $v0, 0($t0)		# load element from $t0 and store into $v0
 	sw $v0, 0($t1)		# store element from $v0 into other array
-	addi $t0, $t0, 4	# auto increment on both arrays
-	addi $t1, $t1, 4
-	addi $t2, $t2, -4	# counter register decrements
-	j loop
+	
 	
 	# -----------------------------------------------
 	# "Due dilligence" to return control to kernel
