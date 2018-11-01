@@ -26,11 +26,7 @@ main:
 	la $t1, num_1		# initialize $t1 to point to memory location with label "num_1"
 	la $t0, array1		# initialize $t0 to point to memory location with label "array1"
 
-	lw $t1, 0($t0) 		# an element from $t0 in index 0 gets loaded into $t1
-	addi $t0, $t0, 4	# post-increment
-
-	sw $t1, 0($t0)		# the element that was retrieved from index 0 now gets stroed into index 1
-	addi $t0, $t0, 4	
+	
 
 	# -----------------------------------------------
 	# "Due dilligence" to return control to kernel
