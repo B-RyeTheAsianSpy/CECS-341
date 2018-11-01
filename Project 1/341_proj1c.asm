@@ -24,10 +24,7 @@ main:
 	la $t1, array1 		# initialize $t1 to point to memory location with label "array1"
 	la $t0, array2 		# initialize $t0 to point to memory location with label "array2"
 
-	lw $v0, 0($t0)		# load element from index 0 and store into $v0
-	sw $v0, 0($t1)		# store the same element into $t1
-	addi $t0, $t0, 4	# stack pointer increments
-	addi $t1, $t1, 4
+
 	
 	# -----------------------------------------------
 	# "Due dilligence" to return control to kernel
