@@ -25,8 +25,6 @@ main:
 	la $t1, num_1		# initialize $t1 to point to memory location with label "num_1"	(0xABCDEF01)
 	la $t0, num_2		# initialize $t0 to point to memory location with label "num_2" (0x55AACC55)
 
-	lw $v0, ($t0)		# load data from address $t0
-	sw $v0, ($t1)		# save the same data to address $t1
 	
 	# -----------------------------------------------
 	# "Due dilligence" to return control to kernel
